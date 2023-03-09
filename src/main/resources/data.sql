@@ -1,6 +1,6 @@
-MERGE INTO notes (note_id, note_content)
-    VALUES (1, 'Создание одной простейшей заметки только с текстом');
-MERGE INTO notes (note_id, note_content)
-    VALUES (2, 'Редактирование заметки');
-MERGE INTO notes (note_id, note_content)
-    VALUES (3, 'Выводить список существующих заметок');
+INSERT INTO notes (note_id, note_content)
+    VALUES (default, 'Создание одной простейшей заметки только с текстом');
+INSERT INTO notes (note_id, note_content)
+    VALUES (default, 'Редактирование заметки');
+INSERT INTO notes (note_id, note_content)
+    VALUES (default, 'Выводить список существующих заметок');

@@ -12,18 +12,15 @@
             <h5 class="my-0 mr-md-auto font-weight-normal">Note</h5>
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
                 <a class="me-3 py-2 text-dark text-decoration-none" href="/">Главная</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="/notes/add">New Заметка</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/notes">Список заметок</a>
             </nav>
         </div>
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h1 class="display-4 fw-normal">Заметки</h1>
-            <p class="fs-5 text-muted">Посмотрите список всех ваших заметок</p>
-        </div>
-        <div class="container mt-5">
-            <div th:each="elem : ${noteslist}" class="alert alert-info mt-2">
-                <h4 th:text="${elem.noteContent}"/>
-                <a th:href="'/notes/' + ${elem.noteId}" class="btn btn-success">Открыть</a>
-            </div>
+            <h2 class="display-4 fw-normal">Добавление новой Заметки</h2>
+            <form action="/notes/add" method="post">
+                <textarea name="content" placeholder="Ведите текст вашей заметки" class="form-control"></textarea><br>
+                <button type="submit" class="btn btn-success">Сохранить заметку</button>
+            </form>
         </div>
     </header>
 </div>

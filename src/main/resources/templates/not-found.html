@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <title>Note</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -12,20 +12,16 @@
             <h5 class="my-0 mr-md-auto font-weight-normal">Note</h5>
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
                 <a class="me-3 py-2 text-dark text-decoration-none" href="/">Главная</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/notes">Список заметок</a>
                 <a class="me-3 py-2 text-dark text-decoration-none" href="/notes/add">New Заметка</a>
             </nav>
         </div>
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h1 class="display-4 fw-normal">Заметки</h1>
-            <p class="fs-5 text-muted">Посмотрите список всех ваших заметок</p>
-        </div>
-        <div class="container mt-5">
-            <div th:each="elem : ${noteslist}" class="alert alert-info mt-2">
-                <h4 th:text="${elem.noteContent}"/>
-                <a th:href="'/notes/' + ${elem.noteId}" class="btn btn-success">Открыть</a>
-            </div>
+            <h5 class="display-4 fw-normal">Ошибка 404 или Not Found</h5>
+            <p class="fs-5 text-muted">Мы пытались найти вашу заметку, ее не существует ...</p>
         </div>
     </header>
 </div>
 </body>
 </html>
+
